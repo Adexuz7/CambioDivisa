@@ -66,14 +66,14 @@ public class Controller implements Initializable {
 
 		origenComboBox.setItems(divisasObservableList);
 		destinoComboBox.setItems(divisasObservableList);
+		
+		cambiarButton.setOnAction(e -> onCambiarAction(e));
 	}
 
 	public Controller() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/View.fxml"));
 		loader.setController(this);
 		loader.load();
-
-		cambiarButton.setOnAction(e -> onCambiarAction(e));
 	}
 
 	private void onCambiarAction(ActionEvent e) {
